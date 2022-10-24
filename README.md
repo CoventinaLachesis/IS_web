@@ -9,7 +9,7 @@ front
 ทำใน template/authentication
 
 # note for M&R group to chat
-aaaa
+กูทำไรไม่เป็นเลยเรียนก่อน
 
 # Lachesis & TONO
 
