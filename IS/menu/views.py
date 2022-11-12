@@ -9,11 +9,16 @@ def order(request,table):
     if request.method == 'POST':
         menu=OrderForm(request.POST,request.FILES)
         if menu.is_valid():
+            if not Table.objects.filter(table_number=table):
+                Table.objects.create(table_number=table)
+            
+            item= menu.cleaned_data['ordermenu']
             instance=menu.save(commit=False)
-            
-            instance.table_number=table
-            
+            instance.table_number=Table.objects.get(table_number=table)
             instance.save()
+            for i in item:
+                instance.ordermenu.add(i)
+
             
             return render(request,"menu/order_succes.html")
             

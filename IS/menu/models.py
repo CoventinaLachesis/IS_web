@@ -1,4 +1,3 @@
-from tkinter import NONE
 from django.db import models
 
 # Create your models here.
@@ -16,9 +15,14 @@ class Menu(models.Model):
     
     def __str__(self):
         return self.name
-    
-class Table_Order(models.Model):
+
+class Table(models.Model):
     table_number=models.IntegerField()
+
+
+
+class Table_Order(models.Model):
+    table_number=models.ForeignKey(Table,on_delete=models.CASCADE)
     ordermenu= models.ManyToManyField(Menu)
     
     def __str__(self):
