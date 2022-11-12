@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    </head>
+    <body>
+        <h3>Central Pattana</h3>
+
+
+        <form action="/signin" method="post">
+            {% csrf_token %}
+            <label for="">Username</label>
+            <input type="text" name="username" id="username" placeholder="Username" Required>
+            <br>
+            <label for="">Password</label>
+            <input type="password" name="pass1" id="pass1" placeholder="Enter you Password" Required>
+            <br>
+            <button type="submit">Login</button>
+
+        </form>
+        <button type="submit"><a href="/signup">Sign up</a></button>
+        <script src="" async defer></script>
+    </body>
+</html>

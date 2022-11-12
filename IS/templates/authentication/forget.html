@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <img src="{% static '/image/Asset 4.png' %} " style="width:100%;" ><br>
+            <img src="{% static '/image/Asset 2.png' %}"style="width:70%;"><br>
+        </div>
+        <form action="/forget" method="post" style="width:100%;text-align:center">
+            {% csrf_token %}
+            <h1>FORGET PASSWORD</h1>
+            <input type="text" name="email" id="email" placeholder="Enter you Email" style="background-image:url({% static '/image/boxinput.png' %});" >
+            <br><br>
+            
+            <button type="submit"class="button-tran"><img src="{% static '/image/requestpassword.png' %}"style="width:50%;"></button>
+            
+            <!--
+            <h2>OR</h2>
+            <input type="text" name="phone" id="phone" placeholder="PHONENUMBER" style="background-image:url({% static 'image/boxinput.png' %});">
+            <br><br>
+            
+            <button type="submit"class="button-tran"><img src="{% static 'image/requestotp.png' %}"style="width:50%;"></button>
+
+            
+            <input type="text" name="otp" id="otp" placeholder="OTP" style="background-image:url({% static 'image/boxinput.png' %});" >
+            <br><br>
+            
+            <button type="submit"class="button-tran"><img src="{% static 'image/resetpassword.png' %}"style="width:50%;"></button>
+            
+            -->
+            
+        </form>
+        <script src="" async defer></script>
+                </div>
+
+    </body>
+</html>

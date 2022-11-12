@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <br><br><br><br><br>
+        </div>
+        <form action="/signup" method="post" style="width:100%;text-align:center">
+            {% csrf_token %}
+           
+            <input type="text" name="email" id="email" placeholder="Enter you Email" style="background-image:url({% static 'image/boxinput.png' %});" Required>
+            <br><br>
+            <input type="password" name="phone" id="phone" placeholder="you phone number" style="background-image:url({% static 'image/boxinput.png' %});" Required>
+            <br><br>
+            <input type="password" name="pass1" id="pass1" placeholder="Enter you Password" style="background-image:url({% static 'image/boxinput.png' %});" Required>
+            <br><br>
+            <input type="password" name="pass2" id="pass2" placeholder="Confirm You password"style="background-image:url({% static 'image/boxinput.png' %});"  Required>
+            <br> <br>
+            <input type="text" name="username" id="username" placeholder="Username"style="background-image:url({% static 'image/boxinput.png' %});"  Required>
+            <br><br>
+            <table  style="width:80%">
+                <tr><td  style="text-align:center;width:30%" ><input type="checkbox" id="agreement" name="agreement" Required></td>
+                    <td  style="text-align:left"><label for="agreement" ><a href="/pdpa"  target="_blank" rel="noopener noreferrer">ได้อ่านข้อตกลงและยอมรับข้อตกลงบริการและนโยบายความเป็นส่วนตัว</a></label><br></td>
+                </tr>
+            </table>
+            
+            </div>
+            <button type="submit"class="button-tran"><img src="{% static 'image/registerbutton.png' %}"style="width:70%;"></button>
+
+        </form>
+        <script src="" async defer></script>
+    
+    </body>
+</html>
