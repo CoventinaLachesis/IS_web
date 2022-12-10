@@ -4,7 +4,7 @@ from django.db import models
 
 class Menu(models.Model):
     
-    type_CHOICES=(("Drink","D"),("Icecream","I"),("Cake","C"),("Muffin","M"),("Donut","Do"),("Other","O"),)
+    type_CHOICES=(("D","Drink"),("I","Icecream"),("C","Cake"),("Muffin","M"),("Donut","Do"),("Other","O"),)
     
     name = models.CharField(max_length=30)
     price = models.IntegerField()

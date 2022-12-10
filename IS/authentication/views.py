@@ -33,20 +33,20 @@ def signup(request):
 
         if User.objects.filter(username=username):
             messages.error(request,"Username already exist! Plase try some either")
-            return redirect('home')
+            return redirect('signin')
         if User.objects.filter(email=email):
             messages.error(request,"Email already exist! Plase try some either")
-            return redirect('home')
+            return redirect('signin')
         if User.objects.filter(phone_number=phone):
             messages.error(request,"Phone already exist! Plase try")
-            return redirect('home')
+            return redirect('signin')
         if len(username)>10:
             messages.error(request,"Username must be under 10 characters")
         if pass1!=pass2:
             messages.error(request,"Passwords didn't match")
         if not  username.isalnum():
             messages.error(request,"Username must be alphanumeric")
-            return redirect('home')
+            return redirect('signin')
 
         myuser=User.objects.create_user(username,email,pass1)
         myuser.first_name=username
@@ -56,6 +56,7 @@ def signup(request):
 
       
         messages.success(request,"Your accout has been successfully created")
+        
         #email
         subject="Welcom to XXX Resturant"
         message="Hello "+myuser.first_name+"!! You accout has been created \n Pleace confirm email to active"
@@ -83,7 +84,7 @@ def signup(request):
         
 
 
-        return redirect('home')
+        return redirect('signin')
     return render(request,"authentication/signup.html")
 
 

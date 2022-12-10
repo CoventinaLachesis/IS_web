@@ -7,6 +7,7 @@ from .forms import *
 
 def order(request,table):
     if request.method == 'POST':
+        
         menu=OrderForm(request.POST,request.FILES)
         if menu.is_valid():
             if not Table.objects.filter(table_number=table):

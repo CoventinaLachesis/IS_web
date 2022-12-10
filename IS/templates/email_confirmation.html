@@ -1,0 +1,9 @@
+
+{% autoescape off %}
+    Welcome to CPN
+
+    Hello {{ name }}
+    Thank for join The Urgent Project event
+    Please confirm your email by clicking on link.
+    Confirmation Link: http://{{domain}}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}
