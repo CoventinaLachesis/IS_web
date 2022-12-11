@@ -11,6 +11,7 @@ def order(request,table):
         menu=OrderForm(request.POST,request.FILES)
         if menu.is_valid():
             if not Table.objects.filter(table_number=table):
+                print("new")
                 Table.objects.create(table_number=table)
             
             item= menu.cleaned_data['ordermenu']
@@ -45,3 +46,7 @@ def addmenu(request):
     else:
         menu = MenuForm()
     return render(request, "menu/addmenu.html", {"menu": menu})
+
+
+def home(request):
+    return render(request,"menu/home.html")

@@ -18,7 +18,6 @@
 
     <body >
         <div class="container">
-            {% csrf_token %}
 
         {%if user.is_authenticated%}
         <h5>WELCOME {{request.user.username}}</h5>
@@ -26,6 +25,7 @@
         {%else%}
         <div style="width:100%">
         <form action="/signin" method="post">
+            {% csrf_token %}
                 {%for message in messages %}
                 <div class="alert alert-{{message.tag}} alert-disnissible fade show " role="alert">
                 <strong>Message:</strong> {{message}}

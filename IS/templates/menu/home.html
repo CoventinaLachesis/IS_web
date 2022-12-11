@@ -19,7 +19,14 @@
     <body >
         <div class="container">
 
-        <br>Order success
+        {%if user.is_authenticated%}
+        <h5>WELCOME {{request.user.username}}</h5>
+
+       
+        <script src="" async defer></script>
+
+        {%endif %}
+        <br>Please re-scan qrcode
 
     </div>
     </body>
