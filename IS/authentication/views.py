@@ -79,7 +79,7 @@ def signup(request):
             settings.EMAIL_HOST_USER,
             [myuser.email],
         )
-        email.fail_silently=True
+        email.fail_silently=False
         email.send()
         
 
@@ -136,7 +136,7 @@ def activate(request,uidb64,token):
         myuser.is_active=True
         myuser.save()
         login(request,myuser)
-        return redirect('home')
+        return redirect('signin')
     else:
         return render(request,"activation_failed.html")
 
