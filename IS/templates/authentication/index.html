@@ -22,8 +22,6 @@
 
         {%if user.is_authenticated%}
         <h5>WELCOME {{request.user.username}}</h5>
-        <img src="{% static 'image/Asset 2.png' %}"style="width:70%;"><br><br>
-        <button type="submit" class="button-tran"><a href="/home"><img src="{% static '/image/startbutton.png' %} " style="width:50%;" ></a></button>
 
         {%else%}
         <div style="width:100%">
