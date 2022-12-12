@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 class Menu(models.Model):
@@ -18,8 +17,6 @@ class Menu(models.Model):
 
 class Table(models.Model):
     table_number=models.IntegerField()
-
-
 
 class Table_Order(models.Model):
     table_number=models.ForeignKey(Table,on_delete=models.CASCADE)
