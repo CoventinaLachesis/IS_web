@@ -3,17 +3,23 @@
   {% load static %}
 
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<title>XXX Restaurant</title>
-<meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XXX Restaurant</title>
+  <meta name="description" content="">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-<form method = "post" enctype="multipart/form-data">
-  {% csrf_token %}
-  {{ menu.as_p }}
-  <button type="submit">Upload</button>
-</form>
+  <form method = "post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div>
+      {{form.ordermenu}}
+
+    </div>
+    <!-- {{ form.as_p }} -->
+    <button type="submit">Upload</button>
+  </form>
 </body>
 </html>
