@@ -6,17 +6,40 @@
 <meta charset="UTF-8">
 <title>XXX Restaurant</title>
 <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
 </head>
 <body>
+  <header>
+    <nav class="header1">
+        <img src="media\images\vanornlogo.png" class="logo">
+        <ul class="nav-links">
+            <li><a href="">Bills</a></li>
+            <li><a href="">Menus</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Contact</a></li>
+            <li><a href="/signin">Sign in</a></li>
+        </ul>
+    </nav>
+</header>
   
-{% for t in table %}
-<li>{{ t.table_number.table_number }}</li>
+<div class="alltable">
+  {% for t in table %}
+  <a>table {{ t.table_number.table_number }}</a>
   {%for menu in t.ordermenu.all %}
   <li>{{ menu.name }}</li>
   {% endfor %}
 
 {% endfor %}
+</div>
 </form>
+
+<footer class="footer">
+  <h5>ติดตามความเคลื่อนไหวและโปรโมชั่นได้ที่</h5>
+  <p>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+  </p>
+</footer>
 </body>
 </html>

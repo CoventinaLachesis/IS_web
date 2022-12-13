@@ -69,4 +69,69 @@ input{
 
     width:23%;
 }
+.header{
+    height: 100vh;
+    width: 94%;
+    padding: 5px 3%;
+    position: relative;
+}
+.footer{
+    background-color: rgb(207, 179, 102);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
 
+.logo{
+    width: 100px; 
+    border-radius: 35%;
+}
+nav{
+    background-color: rgb(207, 179, 102);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links{
+    padding: 28px 0;
+}
+.nav-links li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 0;
+    position: relative;
+}
+.nav-links li a::after{
+    content: '';
+    background: #d3842a;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5;
+}
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+.orderlist{
+    text-align: center;
+
+}
+
+.addui{
+    background-color: rgb(207, 179, 102);
+}
+
+.alltable{
+    text-align: center;
+}
