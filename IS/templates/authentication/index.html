@@ -17,6 +17,17 @@
 
 
     <body >
+        <header>
+            <nav class="header1">
+                <img src="media\images\vanornlogo.png" style=";">
+                <ul class="nav-links">
+                    <li><a href="">Bills</a></li>
+                    <li><a href="">Menus</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Contact</a></li>
+                    <li><a href="/signin">Sign in</a></li>
+                </ul>
+            </nav>
+        </header>
         <div class="container">
 
         {%if user.is_authenticated%}
@@ -56,5 +67,13 @@
 
         {%endif %}
     </div>
+    <footer class="footer">
+        <h5>ติดตามความเคลื่อนไหวและโปรโมชั่นได้ที่</h5>
+        <p>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
     </body>
 </html>

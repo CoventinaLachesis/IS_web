@@ -58,7 +58,7 @@ def signup(request):
         messages.success(request,"Your accout has been successfully created")
         
         #email
-        subject="Welcom to XXX Resturant"
+        subject="Welcom to VA-NORN CAFE"
         message="Hello "+myuser.first_name+"!! You accout has been created \n Pleace confirm email to active"
         from_email = settings.EMAIL_HOST_USER
         to_list=[myuser.email]
