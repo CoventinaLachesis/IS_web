@@ -101,7 +101,7 @@ def signin(request):
                 pass
             else:
                 messages.error(request,"Bad Credentials")
-                return redirect('home')
+                return redirect('signin')
             
             if user is not None:    
                 user=authenticate(username=user.username,password=pass1)
@@ -111,10 +111,10 @@ def signin(request):
                 return render(request,"authentication/index.html",{'fname':fname})
             else:
                 
-                return redirect('home')
+                return redirect('signin')
         except:
             messages.error(request,"Bad Credentials")
-            return redirect('home')
+            return redirect('signin')
             
     return render(request,"authentication/index.html")
 
