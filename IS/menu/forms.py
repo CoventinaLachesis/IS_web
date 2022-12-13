@@ -8,7 +8,7 @@ class MenuForm(forms.ModelForm):
         fields = ("name","price","type", "img")
 class CustomF(forms.ModelMultipleChoiceField):
     def label_from_instance(self, menu):
-        return format_html("<img class='field-img' src='{}'> {} - {}", menu.img.url, menu.name, menu.price)
+        return format_html("<img class='field-img' src='{}'> <br> {} - {}", menu.img.url, menu.name, menu.price)
 
 class OrderForm(forms.ModelForm):
     class Meta:
