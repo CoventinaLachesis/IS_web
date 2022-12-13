@@ -1,5 +1,6 @@
 from django import forms
 from .models import *
+from django.utils.html import format_html
 
 class MenuForm(forms.ModelForm):
     class Meta:
@@ -7,7 +8,9 @@ class MenuForm(forms.ModelForm):
         fields = ("name","price","type", "img")
 class CustomF(forms.ModelMultipleChoiceField):
     def label_from_instance(self, menu):
-        return str(menu.name) +"  "+str(menu.price)
+        return format_html("<img src='{}'> {} - {}", menu.img.url, menu.name, menu.price)
+    # def label_from_instance(self, menu):
+     #   return str(menu.name) +"  "+str(menu.price)
 
 
 class OrderForm(forms.ModelForm):
