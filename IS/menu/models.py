@@ -15,14 +15,20 @@ class Menu(models.Model):
     def __str__(self):
         return self.name
 
-class Table(models.Model):
-    table_number=models.IntegerField()
+# class Table(models.Model):
+#     table_number=models.IntegerField()
+
+# class Table_Order(models.Model):
+#     table_number=models.ForeignKey(Table,on_delete=models.CASCADE)
+#     ordermenu= models.ManyToManyField(Menu)
+    
+#     def __str__(self):
+#         return str(self.table_number)
+    
 
 class Table_Order(models.Model):
-    table_number=models.ForeignKey(Table,on_delete=models.CASCADE)
+    table_number=models.IntegerField()
     ordermenu= models.ManyToManyField(Menu)
     
     def __str__(self):
         return str(self.table_number)
-    
-

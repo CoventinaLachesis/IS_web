@@ -8,13 +8,15 @@
 <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-  
+
 {% for t in table %}
-<li>{{ t.table_number.table_number }}</li>
-  {%for menu in t.ordermenu.all %}
-  <li>{{ menu.name }}</li>
-  {% endfor %}
+  <li>{{ t.table_number }}</li>
+
+    {%for menu in t.ordermenu.all %}
+      <li>{{ menu.name }}</li>
+    {% endfor %}
 
 {% endfor %}
 </form>
