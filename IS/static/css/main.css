@@ -1,137 +1,136 @@
-
 body{
 
-      background-color:#FFEEDB;
-      margin:0;
-      min-height:100vh;
+    background-color:#FFEEDB;
+    margin:0;
+    min-height:100vh;
 }
 
 .container{
-  
-    text-align:center;
-    display:block;
-    object-fit: fill;
+
+  text-align:center;
+  display:block;
+  object-fit: fill;
 
 }
 .menubar{
-    position: fixed;
-    width: 100%;
-    resize:auto;
-    bottom:0px;
+  position: fixed;
+  width: 100%;
+  resize:auto;
+  bottom:0px;
 
 }
 .tablemenu{
-    position:fixed; 
-    width:100%;
-    text-align:center;
-    bottom:0px;
+  position:fixed; 
+  width:100%;
+  text-align:center;
+  bottom:0px;
 }
 
 .button-tran{
 
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 
 }
 .button1{
-    font-size: 20px;
+  font-size: 20px;
 
-    width: 50%;
-    border-radius: 40%;
-    background-color: #FFB000;
-    border:none;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
+  width: 50%;
+  border-radius: 40%;
+  background-color: #FFB000;
+  border:none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 
 }
 
 input{
-    width: 60%;
-    background-color: transparent;
-    background-position: center;
-    border: none;
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding:10px;
-    outline: none;
-    resize:auto;
+  width: 60%;
+  background-color: transparent;
+  background-position: center;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding:10px;
+  outline: none;
+  resize:auto;
 
 }
 
 .event_active{
 
-    width:23%;
+  width:23%;
 }
 .header{
-    height: 100vh;
-    width: 94%;
-    padding: 5px 3%;
-    position: relative;
+  height: 100vh;
+  width: 94%;
+  padding: 5px 3%;
+  position: relative;
 }
 .footer{
-    background-color: rgb(207, 179, 102);
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    color: white;
+  background-color: rgb(207, 179, 102);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: white;
 }
 
 .logo{
-    width: 100px; 
-    border-radius: 35%;
+  width: 100px; 
+  border-radius: 35%;
 }
 nav{
-    background-color: rgb(207, 179, 102);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background-color: rgb(207, 179, 102);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .nav-links{
-    padding: 28px 0;
+  padding: 28px 0;
 }
 .nav-links li{
-    display: inline-block;
-    margin: 0 15px;
+  display: inline-block;
+  margin: 0 15px;
 }
 .nav-links li a{
-    text-decoration: none;
-    color: #fff;
-    padding: 5px 0;
-    position: relative;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 0;
+  position: relative;
 }
 .nav-links li a::after{
-    content: '';
-    background: #d3842a;
-    width: 0%;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: width 0.5;
+  content: '';
+  background: #d3842a;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5;
 }
 .nav-links li a:hover::after{
-    width: 100%;
+  width: 100%;
 }
 
 .orderlist{
-    text-align: center;
+  text-align: center;
 
 }
 
 .addui{
-    background-color: rgb(207, 179, 102);
+  background-color: rgb(207, 179, 102);
 }
 
 .alltable{
-    text-align: center;
+  text-align: center;
 }

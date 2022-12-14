@@ -30,11 +30,20 @@
         </ul>
     </nav>
 </header>
-
 <form method = "post" enctype="multipart/form-data">
   {% csrf_token %}
   {{ menu.as_p }}
   <button type="submit">Upload</button>
 </form>
+
+
+<footer class="footer">
+  <h5>ติดตามความเคลื่อนไหวและโปรโมชั่นได้ที่</h5>
+  <p>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+  </p>
+</footer>
 </body>
 </html>
