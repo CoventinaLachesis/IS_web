@@ -19,7 +19,7 @@
     <body >
         <header>
             <nav class="header1">
-                <img src="media\images\vanornlogo.png" style=";">
+                <img src="media\images\vanornlogo.png" class="logo">
                 <ul class="nav-links">
                     <li><a href="">Bills</a></li>
                     <li><a href="">Menus</a></li>
@@ -35,7 +35,7 @@
 
         {%else%}
         <div style="width:100%">
-        <form action="/signin" method="post">
+        <form action="/signin" method="post" style="margin-top:14px;">
             {% csrf_token %}
                 {%for message in messages %}
                 <div class="alert alert-{{message.tag}} alert-disnissible fade show " role="alert">
@@ -45,17 +45,17 @@
                 </button>
             </div>
             {%endfor%}
-            <label for=""> <img src="{% static '/image/Asset 5.png' %}" style="width:5%;" ></label>
+            <label for=""> <img src="{% static '/image/Asset 5.png' %}" style="width:1%;" ></label>
             <input type="text" name="Email_or_phone" id="Email_or_phone" placeholder="Email_or_phone"style="background-image:url({% static '/image/boxinput.png' %});"  Required>
             <br>
 
-            <label for=""> <img src="{% static '/image/Asset 6.png' %}" style="width:5%;" ></label>
+            <label for=""> <img src="{% static '/image/Asset 6.png' %}" style="width:1%;" ></label>
             <input type="password" name="pass1" id="pass1" placeholder="Enter you Password" style="background-image:url({% static '/image/boxinput.png' %});" Required>
             <br>
 
 
             <table style="width:100%;text-align:center"  >
-            <tr> <td colspan="3">  <button type="submit"class="button-tran"><img src="{% static '/image/loginbutton.png' %}"style="width:70%;"></button></td></tr>
+            <tr> <td colspan="3">  <button type="submit"class="button-tran"><img src="{% static '/image/loginbutton.png' %}"style="width:41%;margin-left: 27px;"></button></td></tr>
             <tr><td style="text-align:right"><button type="submit" class="button-tran"><a href="/signup">Sign up</a></button></td><td></td>
             <td style="text-align:center"><button type="submit" class="button-tran"><a href="/forget">FORGET PASSWORD</a></button></td>
             

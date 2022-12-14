@@ -39,7 +39,6 @@ body{
 }
 .button1{
     font-size: 20px;
-
     width: 50%;
     border-radius: 40%;
     background-color: #FFB000;
@@ -52,7 +51,7 @@ body{
 }
 
 input{
-    width: 60%;
+    width: 14%;
     background-color: transparent;
     background-position: center;
     border: none;
