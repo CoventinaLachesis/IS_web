@@ -4,15 +4,19 @@
 
 <head>
 <meta charset="UTF-8">
-<title>XXX Restaurant</title>
+<title>VA-NORN | addmenu</title>
 <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
-<body>
-<form method = "post" enctype="multipart/form-data" style="text-align:center">
+
+<body style="background-color: rgb(207, 179, 102); text-align: center;">
+<img src="media\images\vanornlogo.png" style="width: 10%;">
+<form method = "post" enctype="multipart/form-data"  style="text-align: center;">
   {% csrf_token %}
   {{ menu.as_p }}
   <button type="submit">Upload</button>
 </form>
+
 </body>
 </html>

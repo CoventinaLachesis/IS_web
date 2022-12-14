@@ -15,13 +15,10 @@
         <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
     </head>
     <body>
-        <div class="container">
-            <img src="{% static '/image/Asset 4.png' %} " style="width:100%;" ><br>
-            <img src="{% static '/image/Asset 2.png' %}"style="width:70%;"><br>
-        </div>
-        <form action="/forget" method="post" style="width:100%;text-align:center">
+        <form action="/forget" method="post" style="width:100%;text-align:center;margin-top: 300px;
+        ">
             {% csrf_token %}
-            <h1>FORGET PASSWORD</h1>
+            <h1>RESET PASSWORD</h1>
             <input type="text" name="email" id="email" placeholder="Enter you Email" style="background-image:url({% static '/image/boxinput.png' %});" >
             <br><br>
             
