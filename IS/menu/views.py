@@ -14,7 +14,10 @@ def order(request,table):
         if menu.is_valid():
             if not Table.objects.filter(table_number=table):
                 print("new")
-                Table.objects.create(table_number=table)
+                if request.user.is_authenticated:                
+                    Table.objects.create(table_number=table,Use_by=request.user)
+                else:
+                    Table.objects.create(table_number=table)
             
             item= menu.cleaned_data['ordermenu']
             instance=menu.save(commit=False)

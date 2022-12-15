@@ -1,4 +1,6 @@
 from django.db import models
+
+from authentication.models import CustomUser
 # Create your models here.
 
 class Menu(models.Model):
@@ -17,6 +19,7 @@ class Menu(models.Model):
 
 class Table(models.Model):
     table_number=models.IntegerField()
+    Use_by=models.OneToOneField(CustomUser,on_delete=models.CASCADE, null=True)
 
 class Table_Order(models.Model):
     table_number=models.ForeignKey(Table,on_delete=models.CASCADE)
