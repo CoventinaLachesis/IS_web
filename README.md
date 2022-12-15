@@ -28,6 +28,3 @@
 
 นายปุณณัตถ์		แก้วพิทักษ์			643 44511 23   
 
-
-# รายงาน
-https://chula-my.sharepoint.com/:w:/g/personal/6434440223_student_chula_ac_th/EZF1w11DQGpPlMLsEkFHC_sBt4-RkNotsaFpyVdZ88k6WA?e=0SkmYg
