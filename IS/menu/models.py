@@ -5,7 +5,7 @@ from authentication.models import CustomUser
 
 class Menu(models.Model):
     
-    type_CHOICES=(("D","Drink"),("I","Icecream"),("C","Cake"),("Muffin","M"),("Donut","Do"),("Other","O"),)
+    type_CHOICES=(("D","Drink"),("I","Icecream"),("C","Cake"),("M","Muffin"),("Do","Donut"),("O","Other"),)
     
     name = models.CharField(max_length=30)
     price = models.IntegerField()

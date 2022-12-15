@@ -16,7 +16,6 @@ User = get_user_model()
 from IS import settings  # type: ignore
 
 import os
-from twilio.rest import Client
 
 
 # Create your views here.
@@ -162,26 +161,7 @@ def forget(request):
             )
             email.fail_silently=True
             email.send()
-        """
-        elif request.POST["phone"] :
-            account_sid = os.environ['TWILIO_ACCOUNT_SID']
-            auth_token = os.environ['TWILIO_AUTH_TOKEN']
-            verify_sid = 'YOUR_VERIFY_SID'
-            client = Client(account_sid, auth_token)
-
-            verification = client.verify.services(
-            'verifySid'
-            ).verifications.create(to='+66952540422', channel='sms')
-
-            print(verification.status)
-            otp_code = input("Please enter the OTP:")
-
-            verification_check = client.verify.services(
-            'verifySid'
-            ).verification_checks.create(to='+66952540422', code=otp_code)
-
-            print(verification_check.status)
-        """
+        
 
         return redirect('home')
     return render(request,"authentication/forget.html")
